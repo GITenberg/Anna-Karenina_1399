@@ -8,16 +8,15 @@ contributor:
     gutenberg_agent_id: '2858'
     url: http://www.gutenberg.org/2009/agents/2858
     wikipedia:
-    - http://www.womenofbrighton.co.uk/constanceblackgarnett.htm
     - http://en.wikipedia.org/wiki/Constance_Garnett
+    - http://www.womenofbrighton.co.uk/constanceblackgarnett.htm
 creator:
   author:
     agent_name: Tolstoy, Leo, graf
     aliases:
     - Tolstoi, Leo
-    - "Tolsto\xEF, L\xE9on"
-    - "\u0422\u043E\u043B\u0441\u0442\u043E\u0439, \u041B\u0435\u0432 \u041D\u0438\
-      \u043A\u043E\u043B\u0430\u0435\u0432\u0438\u0447"
+    - Tolstoï, Léon
+    - Толстой, Лев Николаевич
     - Tolstoy, Lev N.
     birthdate: 1828
     deathdate: 1910
@@ -25,9 +24,9 @@ creator:
     url: http://www.gutenberg.org/2009/agents/136
     wikipedia: http://en.wikipedia.org/wiki/Leo_Tolstoy
 gutenberg_bookshelf:
-- Harvard Classics
 - Best Books Ever Listings
 - Movie Books
+- Harvard Classics
 gutenberg_issued: '1998-07-01'
 gutenberg_type: Text
 identifiers:
@@ -37,11 +36,11 @@ publisher: Project Gutenberg
 rights: Public domain in the USA.
 rights_url: http://creativecommons.org/about/pdm
 subjects:
-- '!lcsh:Married women -- Fiction'
-- '!lcsh:Love stories'
-- '!lcsh:Russia -- Fiction'
-- '!lcc:PG'
 - '!lcsh:Adultery -- Fiction'
+- '!lcsh:Russia -- Fiction'
+- '!lcsh:Love stories'
+- '!lcc:PG'
+- '!lcsh:Married women -- Fiction'
 - '!lcsh:Didactic fiction'
 title: Anna Karenina
 url: http://www.gutenberg.org/ebooks/1399
