@@ -20,19 +20,19 @@ creator:
   author:
     agent_name: Tolstoy, Leo, graf
     aliases:
-    - Tolstoi, Leo
-    - Tolstoï, Léon
     - Толстой, Лев Николаевич
+    - Tolstoi, Leo
     - Tolstoy, Lev N.
+    - Tolstoï, Léon
     birthdate: 1828
     deathdate: 1910
     gutenberg_agent_id: '136'
     url: http://www.gutenberg.org/2009/agents/136
     wikipedia: http://en.wikipedia.org/wiki/Leo_Tolstoy
 gutenberg_bookshelf:
-- Best Books Ever Listings
-- Movie Books
 - Harvard Classics
+- Movie Books
+- Best Books Ever Listings
 gutenberg_issued: '1998-07-01'
 gutenberg_type: Text
 identifiers:
@@ -42,11 +42,11 @@ publisher: Project Gutenberg
 rights: Public domain in the USA.
 rights_url: http://creativecommons.org/about/pdm
 subjects:
-- '!lcsh:Adultery -- Fiction'
-- '!lcsh:Russia -- Fiction'
-- '!lcsh:Love stories'
-- '!lcc:PG'
-- '!lcsh:Married women -- Fiction'
-- '!lcsh:Didactic fiction'
+- '!lcsh: Love stories'
+- '!lcc: PG'
+- '!lcsh: Didactic fiction'
+- '!lcsh: Married women -- Fiction'
+- '!lcsh: Russia -- Fiction'
+- '!lcsh: Adultery -- Fiction'
 title: Anna Karenina
 url: http://www.gutenberg.org/ebooks/1399
