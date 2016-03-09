@@ -21,13 +21,15 @@ script:
 - /usr/bin/python asciidoctor-htmlbook/gitberg-machine/machine.py -o . -m metadata.yaml book.html
 - xsltproc -stringparam external.assets.list " " ./HTMLBook/htmlbook-xsl/epub.xsl book.html
 - cp ./HTMLBook/stylesheets/epub/epub.css OEBPS
-- cp cover.jpg OEBPS/cover.jpg
+- if [ -e cover.jpg ]; then cp cover.jpg OEBPS/cover.jpg; fi
 # look for first images directory and one found, copy over to ./OEBPS
 - find . -name images -type d | head -n 1 | xargs -I {} mv {} ./OEBPS/
 - zip -rX book.epub mimetype
 - zip -rX book.epub OEBPS/ META-INF/
 - if test -d "OEBPS/images/"; then zip -rX book.epub OEBPS/images/ ;fi
 - mv book.epub Anna-Karenina.epub
+- ebook-convert Anna-Karenina.epub Anna-Karenina.mobi
+- xvfb-run ebook-convert Anna-Karenina.epub Anna-Karenina.pdf
 branches:
   only:
   - master
@@ -43,10 +45,15 @@ deploy:
   provider: releases
   api_key:
     secure: sbmiqyI+xGwF62qy9r5cbeXI3VUV0EOFpFgsIXvOaueSqtksvGc/CAbB+uljPOStSogIy5y0OMBU0sTTlIzEPmiZjQR/TBH/yfUujx/QwGH73TCLa80vpYNkj/EJmjmYareT/55i9HbUxt2nPMN3wZUU+Rv8xy3nZ61+iQZJPxYrwN3Vq24Z1f0blEMJTkx04E9IxYZwijXxVbbk5OjQY2ye5gzkr3YBfEz/9phaz95JW1qk28JZLwJsOtHVEXaGLkzRa2TUngn9tH+fVAtMAqizONHL6Akta5t7ZZ2irFq2wNC80bc3bNL0PnBJYw+JJAVrMGi4xi2YzFf+nOFHmyPk/DGjKQf0CGXIs7GeH2/W4fackOJyjaQrdjDEanybTlIBEy8vvxrDOEF9amJ/35G7wx1xkuFcvZN5elRJ0msaJgPiGhzEjAsvryYDOOKhgbh0e1KhtGZBgDh0bUrZDhTq5w5wdEEl0g0ECFRjuysSzFQmen75cVeHt5DGYGNS0Y9y4/f7LEHp/npNkmhejcS8xBrjJQ2nVt4dbbOMTQaTuU+v9oCDiYau1zKv6d2107EwSG8bTS7nUZzbO6CEgQzZMg9zIkNWi6eLvzDkfR9mOP/otZ6d8zu2xj+4Om4OirzPCaHZwZuNIPI/LKWO8QJHqd06LDSYvj483ylCHz0=
-  file: Anna-Karenina.epub
+  file:
+    - Anna-Karenina.epub
+    - Anna-Karenina.mobi
+    - Anna-Karenina.pdf
   "on":
     repo: GITenberg/Anna-Karenina_1399
 addons:
   apt:
     packages:
     - xsltproc
+    - xvfb
+    - calibre
